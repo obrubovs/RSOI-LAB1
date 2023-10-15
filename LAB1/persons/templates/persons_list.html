@@ -1,0 +1,31 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+Все записи
+{% endblock %}
+
+{% block content %}
+
+
+<h1>Все записи</h1>
+
+{% if items %}
+    {% for el in items %}
+
+    <div class="preview">
+        <h3> {{ el.name }} </h3>
+        <p>
+            {{ el.work }}
+            {{ el.age }}
+            {{ el.address }}
+        </p>
+        <a href="{% url 'record' el.id %}" class="btn btn-warning">Смотреть полностью</a>
+    </div>
+
+
+    {% endfor %}
+{% else %}
+    <p>Нет записей</p>
+{% endif %}
+
+{% endblock %}

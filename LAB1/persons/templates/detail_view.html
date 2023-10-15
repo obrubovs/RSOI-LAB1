@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+{{ record.id }}
+{% endblock %}
+
+{% block content %}
+
+<h1>{{ record.name }}</h1> <!-- context_name.field -->
+<p>
+    Возраст: {{ record.age }} <br>
+    Адрес: {{ record.address }} <br>
+    Работа: {{ record.work }}
+</p>
+
+
+{% endblock %}

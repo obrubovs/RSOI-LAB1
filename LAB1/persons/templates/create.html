@@ -1,0 +1,25 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+Создание записи
+{% endblock %}
+
+{% block content %}
+
+<h1>Создание записи</h1>
+
+<div class="fetures">
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form.name }} <br>
+        Возраст
+        {{ form.age }} <br><br>
+        {{ form.address }} <br>
+        {{ form.work }} <br>
+
+        <button class="btn btn-success" type="submit">Добавить запись</button>
+        <span>{{ error }}</span>
+    </form>
+</div>
+{% endblock %}

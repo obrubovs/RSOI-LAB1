@@ -4,6 +4,7 @@ WORKDIR /app
 COPY . /app
 
 ENV PYTHONUNBUFFERED=1
+ENV PYTHONDONTWRITEBYTECODE=1
 
 RUN pip install -r requirements.txt
 

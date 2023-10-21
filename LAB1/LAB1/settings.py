@@ -75,17 +75,20 @@ WSGI_APPLICATION = 'LAB1.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'persons',
-        'USER': 'postgres',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.parse('postgres://rsoi_lab1_db_user:yLUGjzndggnA1Xfs67rqV38TTCg6hC1v@dpg-ckmocnbj89us739r26ag-a.frankfurt-postgres.render.com/rsoi_lab1_db')
+
+    # {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'persons',
+    #     'USER': 'postgres',
+    #     'PASSWORD': 'password',
+    #     'HOST': 'localhost',
+    #     'PORT': '5432',
+    # }
+
 }
 
-DATABASES['default'] = dj_database_url.parse('postgres://rsoi_lab1_db_user:yLUGjzndggnA1Xfs67rqV38TTCg6hC1v@dpg-ckmocnbj89us739r26ag-a.frankfurt-postgres.render.com/rsoi_lab1_db')
+
 
 
 

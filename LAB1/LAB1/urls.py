@@ -22,5 +22,5 @@ from django.conf.urls.static import static
 urlpatterns = [
                   path('admin/', admin.site.urls),
                   path('', include('main.urls')),
-                  path('persons/', include('persons.urls'))
+                  path('api/v1/persons/', include('persons.urls'))
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)  # snippet for serving static files

@@ -23,7 +23,7 @@ jobs:
       - name: Unit Tests
         run: |
           cd LAB1
-          pip ./manage.py test
+          python ./manage.py test
 
 
       # TODO build, test and deploy project

@@ -15,6 +15,12 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Unit Tests
+        run: |
+          cd LAB1
+          python ./manage.py test
+
+
       # TODO build, test and deploy project
 
       - name: Run API Tests

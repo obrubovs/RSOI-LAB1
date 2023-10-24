@@ -15,10 +15,15 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
       - name: Unit Tests
         run: |
           cd LAB1
-          python ./manage.py test
+          pip ./manage.py test
 
 
       # TODO build, test and deploy project

@@ -1,8 +1,8 @@
-from django.urls import path, re_path
+from django.urls import re_path
 from . import views
 
 urlpatterns = [
-    re_path(r'^$', views.records, name='persons'),
+    re_path(r'^api/v1/persons$', views.records, name='persons'),
     # path('create', views.create, name='create'),
-    re_path(r'^([0-9]+)$', views.record_by_id, name='record'),
+    re_path(r'^api/v1/persons/([0-9]+)$', views.record_by_id, name='record'),
 ]

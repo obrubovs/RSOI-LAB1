@@ -47,7 +47,7 @@
 							"raw": "{\n    \"name\": \"{{$randomUserName}}\",\n    \"address\": \"{{$randomStreetAddress}}\",\n    \"work\": \"{{$randomCompanyName}}\",\n    \"age\": 31\n}"
 						},
 						"url": {
-							"raw": "{{baseUrl}}/api/v1/persons",
+							"raw": "{{baseUrl}}/api/v1/persons/",
 							"host": [
 								"{{baseUrl}}"
 							],

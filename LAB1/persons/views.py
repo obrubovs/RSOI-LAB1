@@ -28,7 +28,7 @@ def records(request):
         if person_serializer.is_valid():
             result = person_serializer.save()
             return HttpResponse(
-                headers={"Location": f"/persons/{result.id}"},
+                headers={"Location": f"/api/v1/persons/{result.id}"},
                 status=status.HTTP_201_CREATED
             )
         else:
